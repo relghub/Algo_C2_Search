@@ -10,10 +10,10 @@ namespace Algo_C2_Search
 {
     public class EfficiencySearch
     {
-        public static void Starter(TextBox textBox)
+        public static void Starter(TextBox[] textBox)
         {
-            int n = 100000; // розмір масиву
-            int m = 1000; // кількість ключів для пошуку
+            int m = int.Parse(textBox[1].Text); // кількість ключів для пошуку
+            int n = int.Parse(textBox[2].Text); // розмір масиву
 
             // Генерація випадкового масиву та ключів
             Random rand = new Random();
@@ -38,8 +38,8 @@ namespace Algo_C2_Search
                 LinearSearch(array, key, ref linearComparisons);
             }
             stopwatch.Stop();
-            textBox.AppendText($"Послідовний пошук: {(stopwatch.Elapsed.TotalNanoseconds) / 1000} мкс, Порівняння: {linearComparisons}");
-            textBox.AppendText(Environment.NewLine);
+            textBox[0].AppendText($"Послідовний пошук: {(stopwatch.Elapsed.TotalNanoseconds) / 1000} мкс, Порівняння: {linearComparisons}");
+            textBox[0].AppendText(Environment.NewLine);
 
             // Інтерполяційний пошук
             stopwatch.Restart();
@@ -49,8 +49,8 @@ namespace Algo_C2_Search
                 InterpolationSearch(array, key, ref interpolationComparisons);
             }
             stopwatch.Stop();
-            textBox.AppendText($"Інтерполяційний пошук: {(stopwatch.Elapsed.TotalNanoseconds) / 1000} мкс, Порівняння: {interpolationComparisons}");
-            textBox.AppendText(Environment.NewLine);
+            textBox[0].AppendText($"Інтерполяційний пошук: {(stopwatch.Elapsed.TotalNanoseconds) / 1000} мкс, Порівняння: {interpolationComparisons}");
+            textBox[0].AppendText(Environment.NewLine);
         }
 
         // Послідовний пошук

@@ -30,12 +30,16 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
-            textBox1 = new TextBox();
+            evaluateBox = new TextBox();
             button1 = new Button();
             tabPage2 = new TabPage();
-            textToAnalyze = new TextBox();
-            textResult = new TextBox();
             button2 = new Button();
+            textResult = new TextBox();
+            textToAnalyze = new TextBox();
+            elemCountBox = new TextBox();
+            arrayLengthBox = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -53,7 +57,11 @@
             // 
             // tabPage1
             // 
-            tabPage1.Controls.Add(textBox1);
+            tabPage1.Controls.Add(label2);
+            tabPage1.Controls.Add(label1);
+            tabPage1.Controls.Add(arrayLengthBox);
+            tabPage1.Controls.Add(elemCountBox);
+            tabPage1.Controls.Add(evaluateBox);
             tabPage1.Controls.Add(button1);
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
@@ -63,13 +71,13 @@
             tabPage1.Text = "Ефективність методів пошуку";
             tabPage1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // evaluateBox
             // 
-            textBox1.Location = new Point(6, 6);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(656, 381);
-            textBox1.TabIndex = 1;
+            evaluateBox.Location = new Point(6, 48);
+            evaluateBox.Multiline = true;
+            evaluateBox.Name = "evaluateBox";
+            evaluateBox.Size = new Size(656, 339);
+            evaluateBox.TabIndex = 1;
             // 
             // button1
             // 
@@ -94,21 +102,6 @@
             tabPage2.Text = "Символьний аналіз";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // textToAnalyze
-            // 
-            textToAnalyze.Location = new Point(61, 48);
-            textToAnalyze.Name = "textToAnalyze";
-            textToAnalyze.Size = new Size(231, 27);
-            textToAnalyze.TabIndex = 0;
-            // 
-            // textResult
-            // 
-            textResult.Location = new Point(60, 111);
-            textResult.Multiline = true;
-            textResult.Name = "textResult";
-            textResult.Size = new Size(232, 245);
-            textResult.TabIndex = 1;
-            // 
             // button2
             // 
             button2.Location = new Point(338, 47);
@@ -119,6 +112,53 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // textResult
+            // 
+            textResult.Location = new Point(60, 111);
+            textResult.Multiline = true;
+            textResult.Name = "textResult";
+            textResult.Size = new Size(232, 245);
+            textResult.TabIndex = 1;
+            // 
+            // textToAnalyze
+            // 
+            textToAnalyze.Location = new Point(61, 48);
+            textToAnalyze.Name = "textToAnalyze";
+            textToAnalyze.Size = new Size(231, 27);
+            textToAnalyze.TabIndex = 0;
+            // 
+            // elemCountBox
+            // 
+            elemCountBox.Location = new Point(219, 15);
+            elemCountBox.Name = "elemCountBox";
+            elemCountBox.Size = new Size(125, 27);
+            elemCountBox.TabIndex = 2;
+            // 
+            // arrayLengthBox
+            // 
+            arrayLengthBox.Location = new Point(520, 15);
+            arrayLengthBox.Name = "arrayLengthBox";
+            arrayLengthBox.Size = new Size(142, 27);
+            arrayLengthBox.TabIndex = 3;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(6, 18);
+            label1.Name = "label1";
+            label1.Size = new Size(207, 20);
+            label1.TabIndex = 4;
+            label1.Text = "Кількість шуканих елементів";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(387, 18);
+            label2.Name = "label2";
+            label2.Size = new Size(127, 20);
+            label2.TabIndex = 5;
+            label2.Text = "Довжина масиву";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -126,7 +166,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(tabControl1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Алгоритми пошуку";
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
@@ -140,10 +180,14 @@
         private TabControl tabControl1;
         private TabPage tabPage1;
         private TabPage tabPage2;
-        private TextBox textBox1;
+        private TextBox evaluateBox;
         private Button button1;
         private TextBox textResult;
         private TextBox textToAnalyze;
         private Button button2;
+        private Label label2;
+        private Label label1;
+        private TextBox arrayLengthBox;
+        private TextBox elemCountBox;
     }
 }

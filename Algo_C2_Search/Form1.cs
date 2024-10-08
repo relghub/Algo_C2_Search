@@ -9,7 +9,7 @@ namespace Algo_C2_Search
 
         private void button1_Click(object sender, EventArgs e)
         {
-            EfficiencySearch.Starter(textBox1);
+            EfficiencySearch.Starter([evaluateBox, elemCountBox, arrayLengthBox]);
         }
 
         private void button2_Click(object sender, EventArgs e)
